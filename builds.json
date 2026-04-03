@@ -35,6 +35,19 @@
           "tag": "Fort Joy",
           "levels": [
             {
+              "level": 1,
+              "attribute": "Finesse +2, Wits +2, Memória +1",
+              "combat": "Huntsman 1, Ranged 1",
+              "talent": null,
+              "skills": [
+                "Ricochet",
+                "Tactical Retreat",
+                "First Aid"
+              ],
+              "tip": "Personagem origin — skills vêm pré-definidas. Priorize Finesse acima de tudo desde o início.",
+              "isCreation": true
+            },
+            {
               "level": 2,
               "attribute": "Finesse",
               "abilities": [
@@ -307,6 +320,18 @@
           "tag": "Fort Joy",
           "levels": [
             {
+              "level": 1,
+              "attribute": "Strength +3, Constituição +2",
+              "combat": "Warfare 1, Polymorph 1",
+              "talent": null,
+              "skills": [
+                "Battle Stomp",
+                "Bouncing Shield"
+              ],
+              "tip": "Personagem origin — skills vêm pré-definidas. Foque Strength como atributo principal.",
+              "isCreation": true
+            },
+            {
               "level": 2,
               "attribute": "Strength",
               "abilities": [
@@ -578,6 +603,18 @@
           "tag": "Fort Joy",
           "levels": [
             {
+              "level": 1,
+              "attribute": "Finesse +3, Wits +1, Memória +1",
+              "combat": "Scoundrel 1, Polymorph 1",
+              "talent": null,
+              "skills": [
+                "Backlash",
+                "Adrenaline"
+              ],
+              "tip": "Personagem origin — skills vêm pré-definidas. Finesse é seu dano, Wits é seu crít.",
+              "isCreation": true
+            },
+            {
               "level": 2,
               "attribute": "Finesse",
               "abilities": [
@@ -842,6 +879,20 @@
           ],
           "tag": "Fort Joy",
           "levels": [
+            {
+              "level": 1,
+              "attribute": "Inteligência +2, Memória +2, Constituição +1",
+              "combat": "Hydrosophist 1, Aerotheurge 1",
+              "talent": null,
+              "skills": [
+                "Electric Discharge",
+                "Restoration",
+                "Rain",
+                "Armour of Frost"
+              ],
+              "tip": "Personagem origin — skills vêm pré-definidas. Inteligência e Memória são co-prioritárias.",
+              "isCreation": true
+            },
             {
               "level": 2,
               "attribute": "Inteligência",
