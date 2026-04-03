@@ -1,0 +1,1087 @@
+{
+  "characters": [
+    {
+      "id": "ifan",
+      "name": "Ifan ben-Mezd",
+      "class": "Ranger",
+      "role": "DPS Ranged",
+      "damage_type": "Físico / Elemental",
+      "primary_attribute": "Finesse",
+      "color": "#c8a84b",
+      "icon": "🏹",
+      "description": "Arqueiro de alto ground com bursts críticos. Ingenious garante dano massivo. Use Ricochet + Ballistic Shot de terreno elevado.",
+      "priorities": {
+        "attributes": [
+          "Finesse",
+          "Wits",
+          "Memória",
+          "Constituição"
+        ],
+        "abilities": [
+          "Huntsman",
+          "Ranged",
+          "Pyrokinetic",
+          "Scoundrel"
+        ],
+        "playstyle": "Sempre em terreno elevado. Ricochet em grupos. Wolf tanqueia."
+      },
+      "phases": [
+        {
+          "label": "Níveis 1–4",
+          "range": [
+            1,
+            4
+          ],
+          "tag": "Fort Joy",
+          "levels": [
+            {
+              "level": 2,
+              "attribute": "Finesse",
+              "abilities": [
+                "Huntsman 2"
+              ],
+              "talent": "Executioner",
+              "skills": [
+                "Ricochet",
+                "Tactical Retreat",
+                "First Aid",
+                "Summon Wolf"
+              ],
+              "tip": "Suba para terreno alto. Deixe o lobo atrair aggro."
+            },
+            {
+              "level": 3,
+              "attribute": "Finesse",
+              "abilities": [
+                "Ranged 1"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Continue focando em Finesse para escalar dano."
+            },
+            {
+              "level": 4,
+              "attribute": "Wits",
+              "abilities": [
+                "Ranged 2"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Wits aumenta iniciativa e chance de crítico."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 5–9",
+          "range": [
+            5,
+            9
+          ],
+          "tag": "Act 1 / Driftwood",
+          "levels": [
+            {
+              "level": 5,
+              "attribute": "Finesse",
+              "abilities": [
+                "Huntsman 3"
+              ],
+              "talent": null,
+              "skills": [
+                "Ballistic Shot"
+              ],
+              "tip": "Ballistic Shot explode dano baseado na distância."
+            },
+            {
+              "level": 6,
+              "attribute": "Finesse",
+              "abilities": [
+                "Pyrokinetic 1"
+              ],
+              "talent": null,
+              "skills": [
+                "Haste",
+                "Peace of Mind"
+              ],
+              "tip": "Haste + Peace of Mind são buffs cruciais para burst."
+            },
+            {
+              "level": 7,
+              "attribute": "Wits",
+              "abilities": [
+                "Summoning 1"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Summoning 1 opcional para melhorar o lobo."
+            },
+            {
+              "level": 8,
+              "attribute": "Finesse",
+              "abilities": [
+                "Ranged 3"
+              ],
+              "talent": "Elemental Ranger",
+              "skills": [],
+              "tip": "Elemental Ranger: dano extra em superfícies elementais."
+            },
+            {
+              "level": 9,
+              "attribute": "Constituição",
+              "abilities": [
+                "Huntsman 4"
+              ],
+              "talent": null,
+              "skills": [
+                "Pin Down"
+              ],
+              "tip": "Pin Down paralisa inimigos corpo a corpo."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 10–16",
+          "range": [
+            10,
+            16
+          ],
+          "tag": "Nameless Isle",
+          "levels": [
+            {
+              "level": 10,
+              "attribute": "Finesse",
+              "abilities": [
+                "Huntsman 5"
+              ],
+              "talent": null,
+              "skills": [
+                "Sky Shot"
+              ],
+              "tip": "Huntsman 5 maximiza bônus de terreno alto (até +50%)."
+            },
+            {
+              "level": 11,
+              "attribute": "Finesse",
+              "abilities": [
+                "Scoundrel 1"
+              ],
+              "talent": null,
+              "skills": [
+                "Adrenaline"
+              ],
+              "tip": "Adrenaline: burst de AP num turno crucial."
+            },
+            {
+              "level": 12,
+              "attribute": "Wits",
+              "abilities": [],
+              "talent": "Arrow Recovery",
+              "skills": [
+                "Take Aim"
+              ],
+              "tip": "Arrow Recovery poupa flechas especiais."
+            },
+            {
+              "level": 13,
+              "attribute": "Memória",
+              "abilities": [
+                "Pyrokinetic 2"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Mais Pyro para Peace of Mind mais forte."
+            },
+            {
+              "level": 14,
+              "attribute": "Finesse",
+              "abilities": [
+                "Ranged 4"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Continue escalando Finesse."
+            },
+            {
+              "level": 15,
+              "attribute": "Finesse",
+              "abilities": [
+                "Polymorph 1"
+              ],
+              "talent": null,
+              "skills": [
+                "Phoenix Dive"
+              ],
+              "tip": "Phoenix Dive dá mobilidade vertical extra."
+            },
+            {
+              "level": 16,
+              "attribute": "Wits",
+              "abilities": [],
+              "talent": "Living Armour",
+              "skills": [],
+              "tip": "Living Armour regenera armadura mágica com cura."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 17–20",
+          "range": [
+            17,
+            20
+          ],
+          "tag": "Arx / Late Game",
+          "levels": [
+            {
+              "level": 17,
+              "attribute": "Finesse",
+              "abilities": [
+                "Warfare 1"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Warfare 1 multiplica dano físico geral."
+            },
+            {
+              "level": 18,
+              "attribute": "Wits",
+              "abilities": [],
+              "talent": "Far Out Man",
+              "skills": [
+                "Infiltrating Arrow"
+              ],
+              "tip": "Far Out Man aumenta alcance das skills."
+            },
+            {
+              "level": 19,
+              "attribute": "Memória",
+              "abilities": [
+                "Summoning 2"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Summoning 2 para fortalecer o Incarnate."
+            },
+            {
+              "level": 20,
+              "attribute": "Finesse",
+              "abilities": [],
+              "talent": "The Pawn",
+              "skills": [
+                "Throw Explosive Trap"
+              ],
+              "tip": "The Pawn: movimento livre por turno — essencial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "redprince",
+      "name": "Red Prince",
+      "class": "Juggernaut",
+      "role": "Tank / DPS Melee",
+      "damage_type": "Físico",
+      "primary_attribute": "Strength",
+      "color": "#c84b4b",
+      "icon": "⚔️",
+      "description": "Tank melee indestrutível com AoE e controle de grupo. Resistências de lagarto, Chicken Claw para CC. Whirlwind limpa grupos inteiros.",
+      "priorities": {
+        "attributes": [
+          "Strength",
+          "Constituição",
+          "Memória"
+        ],
+        "abilities": [
+          "Warfare",
+          "Polymorph",
+          "Geomancer"
+        ],
+        "playstyle": "Bull Rush no grupo. Challenge + Whirlwind. Chicken nos ranged perigosos."
+      },
+      "phases": [
+        {
+          "label": "Níveis 1–4",
+          "range": [
+            1,
+            4
+          ],
+          "tag": "Fort Joy",
+          "levels": [
+            {
+              "level": 2,
+              "attribute": "Strength",
+              "abilities": [
+                "Warfare 2"
+              ],
+              "talent": "Picture of Health",
+              "skills": [
+                "Battle Stomp",
+                "Bouncing Shield",
+                "Bull Rush"
+              ],
+              "tip": "Picture of Health: +Constituição por ponto em Warfare."
+            },
+            {
+              "level": 3,
+              "attribute": "Constituição",
+              "abilities": [
+                "Polymorph 1"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Polymorph 1 abre acesso ao Chicken Claw."
+            },
+            {
+              "level": 4,
+              "attribute": "Strength",
+              "abilities": [
+                "Polymorph 2"
+              ],
+              "talent": null,
+              "skills": [
+                "Chicken Claw"
+              ],
+              "tip": "Chicken Claw: remove inimigo perigoso do combate por turnos."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 5–9",
+          "range": [
+            5,
+            9
+          ],
+          "tag": "Act 1 / Driftwood",
+          "levels": [
+            {
+              "level": 5,
+              "attribute": "Strength",
+              "abilities": [
+                "Warfare 3"
+              ],
+              "talent": null,
+              "skills": [
+                "Whirlwind"
+              ],
+              "tip": "Whirlwind: dano AoE em todos inimigos adjacentes."
+            },
+            {
+              "level": 6,
+              "attribute": "Constituição",
+              "abilities": [
+                "Polymorph 3"
+              ],
+              "talent": null,
+              "skills": [
+                "Tentacle Lash"
+              ],
+              "tip": "Tentacle Lash: single-target forte + desarma inimigo."
+            },
+            {
+              "level": 7,
+              "attribute": "Strength",
+              "abilities": [
+                "Geomancer 1"
+              ],
+              "talent": null,
+              "skills": [
+                "Fortify"
+              ],
+              "tip": "Fortify: remove debuffs e aumenta armadura física."
+            },
+            {
+              "level": 8,
+              "attribute": "Strength",
+              "abilities": [],
+              "talent": "Hothead",
+              "skills": [
+                "Challenge"
+              ],
+              "tip": "Hothead: +crítico e precisão quando em HP cheio."
+            },
+            {
+              "level": 9,
+              "attribute": "Constituição",
+              "abilities": [
+                "Warfare 4"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Warfare 4 aumenta o multiplicador de dano físico."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 10–16",
+          "range": [
+            10,
+            16
+          ],
+          "tag": "Nameless Isle",
+          "levels": [
+            {
+              "level": 10,
+              "attribute": "Strength",
+              "abilities": [
+                "Polymorph 4"
+              ],
+              "talent": null,
+              "skills": [
+                "Spread Your Wings"
+              ],
+              "tip": "Wings: voo e bônus de terreno alto para o tank."
+            },
+            {
+              "level": 11,
+              "attribute": "Memória",
+              "abilities": [
+                "Geomancer 2"
+              ],
+              "talent": null,
+              "skills": [
+                "Earthquake"
+              ],
+              "tip": "Earthquake: knockdown em área quando armadura física baixa."
+            },
+            {
+              "level": 12,
+              "attribute": "Strength",
+              "abilities": [],
+              "talent": "Living Armour",
+              "skills": [],
+              "tip": "Living Armour: heals da Lohse viram armadura mágica."
+            },
+            {
+              "level": 13,
+              "attribute": "Constituição",
+              "abilities": [
+                "Warfare 5"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Warfare 5: dano físico no teto máximo."
+            },
+            {
+              "level": 14,
+              "attribute": "Strength",
+              "abilities": [
+                "Polymorph 4"
+              ],
+              "talent": null,
+              "skills": [
+                "Skin Graft"
+              ],
+              "tip": "Skin Graft reseta cooldowns — poderoso em boss fights."
+            },
+            {
+              "level": 15,
+              "attribute": "Constituição",
+              "abilities": [
+                "Necromancer 1"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Necro 1 opcional: lifesteal em dano físico causado."
+            },
+            {
+              "level": 16,
+              "attribute": "Strength",
+              "abilities": [],
+              "talent": "Opportunist",
+              "skills": [],
+              "tip": "Opportunist: ataca inimigos que tentam fugir do melee."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 17–20",
+          "range": [
+            17,
+            20
+          ],
+          "tag": "Arx / Late Game",
+          "levels": [
+            {
+              "level": 17,
+              "attribute": "Strength",
+              "abilities": [
+                "Leadership 1"
+              ],
+              "talent": null,
+              "skills": [
+                "Blitz Attack"
+              ],
+              "tip": "Leadership buffa party próxima. Blitz Attack: burst."
+            },
+            {
+              "level": 18,
+              "attribute": "Constituição",
+              "abilities": [],
+              "talent": "The Pawn",
+              "skills": [
+                "Taunt"
+              ],
+              "tip": "The Pawn + tank = movimentação livre constante."
+            },
+            {
+              "level": 19,
+              "attribute": "Memória",
+              "abilities": [
+                "Geomancer 3"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Mais Geomancer para skills defensivas adicionais."
+            },
+            {
+              "level": 20,
+              "attribute": "Strength",
+              "abilities": [],
+              "talent": "Comeback Kid",
+              "skills": [],
+              "tip": "Comeback Kid: sobrevive a 1 golpe fatal. Seguro em Honour."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sebille",
+      "name": "Sebille",
+      "class": "Duelista Rogue",
+      "role": "Assassina / DPS Melee",
+      "damage_type": "Físico / Veneno",
+      "primary_attribute": "Finesse",
+      "color": "#9b4bc8",
+      "icon": "🗡️",
+      "description": "Assassina stealth com backstabs letais. Flesh Sacrifice gera AP extra e sangue. Cloak and Dagger reposiciona perfeitamente atrás dos inimigos.",
+      "priorities": {
+        "attributes": [
+          "Finesse",
+          "Memória",
+          "Wits",
+          "Constituição"
+        ],
+        "abilities": [
+          "Scoundrel",
+          "Polymorph",
+          "Dual Wielding"
+        ],
+        "playstyle": "Flesh Sacrifice → Backlash → Adrenaline → burst. Some com Cloak depois."
+      },
+      "phases": [
+        {
+          "label": "Níveis 1–4",
+          "range": [
+            1,
+            4
+          ],
+          "tag": "Fort Joy",
+          "levels": [
+            {
+              "level": 2,
+              "attribute": "Finesse",
+              "abilities": [
+                "Scoundrel 2"
+              ],
+              "talent": "Guerrilla",
+              "skills": [
+                "Backlash",
+                "Adrenaline",
+                "Rupture Tendons",
+                "Chameleon Cloak"
+              ],
+              "tip": "Guerrilla: +40% dano ao atacar saindo de stealth."
+            },
+            {
+              "level": 3,
+              "attribute": "Memória",
+              "abilities": [
+                "Polymorph 1"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Polymorph 1 dá acesso ao Chameleon Cloak."
+            },
+            {
+              "level": 4,
+              "attribute": "Finesse",
+              "abilities": [
+                "Polymorph 2"
+              ],
+              "talent": null,
+              "skills": [
+                "Chicken Claw"
+              ],
+              "tip": "Chicken Claw para neutralizar o carry inimigo."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 5–9",
+          "range": [
+            5,
+            9
+          ],
+          "tag": "Act 1 / Driftwood",
+          "levels": [
+            {
+              "level": 5,
+              "attribute": "Finesse",
+              "abilities": [
+                "Scoundrel 3"
+              ],
+              "talent": null,
+              "skills": [
+                "Cloak and Dagger"
+              ],
+              "tip": "Cloak and Dagger: teletransporte + invisibilidade simultâneos."
+            },
+            {
+              "level": 6,
+              "attribute": "Constituição",
+              "abilities": [
+                "Dual Wielding 1"
+              ],
+              "talent": null,
+              "skills": [
+                "Venom Coating"
+              ],
+              "tip": "Dual Wield + Venom Coating = DPS veneno constante."
+            },
+            {
+              "level": 7,
+              "attribute": "Finesse",
+              "abilities": [
+                "Scoundrel 4"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Scoundrel escala dano crítico e multiplicador de backstab."
+            },
+            {
+              "level": 8,
+              "attribute": "Finesse",
+              "abilities": [],
+              "talent": "Executioner",
+              "skills": [],
+              "tip": "Executioner: +2 AP ao matar — garante segundo alvo."
+            },
+            {
+              "level": 9,
+              "attribute": "Memória",
+              "abilities": [
+                "Polymorph 3"
+              ],
+              "talent": null,
+              "skills": [
+                "Fan of Knives"
+              ],
+              "tip": "Fan of Knives: dano em área de curto alcance."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 10–16",
+          "range": [
+            10,
+            16
+          ],
+          "tag": "Nameless Isle",
+          "levels": [
+            {
+              "level": 10,
+              "attribute": "Finesse",
+              "abilities": [
+                "Dual Wielding 2"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Dual Wield 2 aumenta evasão e dano com daggers."
+            },
+            {
+              "level": 11,
+              "attribute": "Wits",
+              "abilities": [
+                "Scoundrel 5"
+              ],
+              "talent": null,
+              "skills": [
+                "Shadow Step"
+              ],
+              "tip": "Shadow Step: teleporte com backstab garantido em qualquer alvo."
+            },
+            {
+              "level": 12,
+              "attribute": "Finesse",
+              "abilities": [],
+              "talent": "The Pawn",
+              "skills": [],
+              "tip": "The Pawn: movimento livre para flanquear em todo turno."
+            },
+            {
+              "level": 13,
+              "attribute": "Memória",
+              "abilities": [
+                "Warfare 1"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Warfare 1: multiplicador de todo dano físico da build."
+            },
+            {
+              "level": 14,
+              "attribute": "Finesse",
+              "abilities": [
+                "Dual Wielding 3"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Dual Wield 3 maximiza dano com daggers duais."
+            },
+            {
+              "level": 15,
+              "attribute": "Wits",
+              "abilities": [
+                "Polymorph 4"
+              ],
+              "talent": null,
+              "skills": [
+                "Terrifying Cry"
+              ],
+              "tip": "Terrifying Cry: debuff de armadura em área."
+            },
+            {
+              "level": 16,
+              "attribute": "Finesse",
+              "abilities": [],
+              "talent": "Living Armour",
+              "skills": [],
+              "tip": "Living Armour: sobrevivência extra no front melee."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 17–20",
+          "range": [
+            17,
+            20
+          ],
+          "tag": "Arx / Late Game",
+          "levels": [
+            {
+              "level": 17,
+              "attribute": "Finesse",
+              "abilities": [
+                "Scoundrel 5"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Scoundrel 5: todas as skills de rogue disponíveis."
+            },
+            {
+              "level": 18,
+              "attribute": "Memória",
+              "abilities": [],
+              "talent": "Backlasher",
+              "skills": [],
+              "tip": "Backlasher: ataque de retaliação em ataques melee recebidos."
+            },
+            {
+              "level": 19,
+              "attribute": "Wits",
+              "abilities": [
+                "Polymorph 5"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Polymorph 5 para skills de controle avançadas."
+            },
+            {
+              "level": 20,
+              "attribute": "Finesse",
+              "abilities": [],
+              "talent": "Shadowblade",
+              "skills": [
+                "Corrosive Touch"
+              ],
+              "tip": "Shadowblade amplifica backstabs. Corrosive Touch remove armadura."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lohse",
+      "name": "Lohse",
+      "class": "Elusive Enchanter",
+      "role": "Suporte / Controle",
+      "damage_type": "Mágico (Água / Ar)",
+      "primary_attribute": "Inteligência",
+      "color": "#4b9bc8",
+      "icon": "✨",
+      "description": "Mago de controle com heals infinitos. Rain cria superfícies Wet para Chain Lightning stunnar grupos. Far Out Man amplifica alcance de todas as skills.",
+      "priorities": {
+        "attributes": [
+          "Inteligência",
+          "Memória",
+          "Constituição"
+        ],
+        "abilities": [
+          "Hydrosophist",
+          "Aerotheurge",
+          "Polymorph"
+        ],
+        "playstyle": "Rain → Chain Lightning (stun em cadeia). Healing Ritual sustenta a party."
+      },
+      "phases": [
+        {
+          "label": "Níveis 1–4",
+          "range": [
+            1,
+            4
+          ],
+          "tag": "Fort Joy",
+          "levels": [
+            {
+              "level": 2,
+              "attribute": "Inteligência",
+              "abilities": [
+                "Hydrosophist 2"
+              ],
+              "talent": "Mnemonic",
+              "skills": [
+                "Restoration",
+                "Rain",
+                "Armour of Frost",
+                "Electric Discharge"
+              ],
+              "tip": "Mnemonic: +3 slots de skills — essencial para mago suporte."
+            },
+            {
+              "level": 3,
+              "attribute": "Memória",
+              "abilities": [
+                "Aerotheurge 1"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Aerotheurge 1 abre acesso a Electric Discharge."
+            },
+            {
+              "level": 4,
+              "attribute": "Inteligência",
+              "abilities": [
+                "Aerotheurge 2"
+              ],
+              "talent": null,
+              "skills": [
+                "Chameleon Cloak"
+              ],
+              "tip": "Aerotheurge 2 para skills de controle elétrico e vento."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 5–9",
+          "range": [
+            5,
+            9
+          ],
+          "tag": "Act 1 / Driftwood",
+          "levels": [
+            {
+              "level": 5,
+              "attribute": "Inteligência",
+              "abilities": [
+                "Hydrosophist 3"
+              ],
+              "talent": null,
+              "skills": [
+                "Healing Ritual"
+              ],
+              "tip": "Healing Ritual cura aliados em cadeia — melhor heal do jogo."
+            },
+            {
+              "level": 6,
+              "attribute": "Constituição",
+              "abilities": [
+                "Aerotheurge 3"
+              ],
+              "talent": null,
+              "skills": [
+                "Chain Lightning"
+              ],
+              "tip": "Chain Lightning em alvos Wet: stun em cadeia devastador."
+            },
+            {
+              "level": 7,
+              "attribute": "Inteligência",
+              "abilities": [
+                "Hydrosophist 4"
+              ],
+              "talent": null,
+              "skills": [
+                "Hail Strike"
+              ],
+              "tip": "Hail Strike: dano + congelamento em área ampla."
+            },
+            {
+              "level": 8,
+              "attribute": "Memória",
+              "abilities": [],
+              "talent": "Savage Sortilege",
+              "skills": [
+                "Bless"
+              ],
+              "tip": "Savage Sortilege: spells podem dar crítico baseado em Wits."
+            },
+            {
+              "level": 9,
+              "attribute": "Inteligência",
+              "abilities": [
+                "Aerotheurge 4"
+              ],
+              "talent": null,
+              "skills": [
+                "Mass Cleanse Wounds"
+              ],
+              "tip": "Mass Cleanse remove veneno e cura por área."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 10–16",
+          "range": [
+            10,
+            16
+          ],
+          "tag": "Nameless Isle",
+          "levels": [
+            {
+              "level": 10,
+              "attribute": "Inteligência",
+              "abilities": [
+                "Hydrosophist 5"
+              ],
+              "talent": null,
+              "skills": [
+                "Steam Lance"
+              ],
+              "tip": "Steam Lance: cura + limpeza de superfícies em linha."
+            },
+            {
+              "level": 11,
+              "attribute": "Memória",
+              "abilities": [
+                "Aerotheurge 5"
+              ],
+              "talent": null,
+              "skills": [
+                "Winter Blast"
+              ],
+              "tip": "Winter Blast: cone de gelo + freeze em múltiplos alvos."
+            },
+            {
+              "level": 12,
+              "attribute": "Inteligência",
+              "abilities": [],
+              "talent": "Elemental Affinity",
+              "skills": [],
+              "tip": "Elemental Affinity: -1 AP em skills estando em superfície elemental."
+            },
+            {
+              "level": 13,
+              "attribute": "Constituição",
+              "abilities": [
+                "Polymorph 1"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Polymorph 1 para Chameleon Cloak e escape seguro."
+            },
+            {
+              "level": 14,
+              "attribute": "Inteligência",
+              "abilities": [
+                "Polymorph 2"
+              ],
+              "talent": null,
+              "skills": [
+                "Skin Graft"
+              ],
+              "tip": "Skin Graft reseta cooldowns — essencial para sequências de heal."
+            },
+            {
+              "level": 15,
+              "attribute": "Memória",
+              "abilities": [
+                "Warfare 1"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Warfare 1 opcional para sinergia de dano elemental."
+            },
+            {
+              "level": 16,
+              "attribute": "Inteligência",
+              "abilities": [],
+              "talent": "Living Armour",
+              "skills": [],
+              "tip": "Living Armour: cada cura regenera armadura mágica da Lohse."
+            }
+          ]
+        },
+        {
+          "label": "Níveis 17–20",
+          "range": [
+            17,
+            20
+          ],
+          "tag": "Arx / Late Game",
+          "levels": [
+            {
+              "level": 17,
+              "attribute": "Inteligência",
+              "abilities": [
+                "Hydrosophist 6"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Hydro 6 para skills avançadas de cura e controle hídrico."
+            },
+            {
+              "level": 18,
+              "attribute": "Memória",
+              "abilities": [],
+              "talent": "Far Out Man",
+              "skills": [
+                "Global Teleportation"
+              ],
+              "tip": "Far Out Man: +2m de alcance em todas as skills."
+            },
+            {
+              "level": 19,
+              "attribute": "Constituição",
+              "abilities": [
+                "Aerotheurge 6"
+              ],
+              "talent": null,
+              "skills": [],
+              "tip": "Aerotheurge 6 maximiza CC e dano elétrico."
+            },
+            {
+              "level": 20,
+              "attribute": "Inteligência",
+              "abilities": [],
+              "talent": "Hothead",
+              "skills": [
+                "Healing Aura"
+              ],
+              "tip": "Hothead: críticos em HP cheio. Healing Aura: cura passiva por turno."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
