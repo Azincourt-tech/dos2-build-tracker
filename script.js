@@ -12,7 +12,8 @@ const State = {
   completedLevels: {},  // { charId: Set<number> }
   activeFilters: new Set(['all']),
   searchQuery: '',
-  openPhases: {}        // { charId+phaseIdx: bool }
+  openPhases: {},       // { charId+phaseIdx: bool }
+  theme: document.documentElement.getAttribute('data-theme') || 'dark'
 }
 
 // Tooltips de skills (descrições curtas para hover)
@@ -84,7 +85,8 @@ const Storage = {
   KEYS: {
     completed: 'dos2_completed',
     activeChar: 'dos2_activeChar',
-    openPhases: 'dos2_openPhases'
+    openPhases: 'dos2_openPhases',
+    theme: 'dos2_theme'
   },
 
   load() {
@@ -192,6 +194,12 @@ function buildUI() {
           <nav class="char-tabs-wrap" role="tablist" aria-label="Personagens" id="char-tabs"></nav>
 
           <div class="header-actions">
+            <button class="btn-icon" id="btn-toggle-all" title="Expandir/recolher todas as fases" aria-label="Expandir ou recolher todas as fases">
+              ⇕
+            </button>
+            <button class="btn-icon" id="btn-theme" title="Alternar tema claro/escuro" aria-label="Alternar tema claro ou escuro">
+              ${State.theme === 'light' ? '🌙' : '☀️'}
+            </button>
             <button class="btn-icon" id="btn-reset" title="Resetar progresso deste personagem" aria-label="Resetar progresso">
               ↺
             </button>
@@ -209,7 +217,7 @@ function buildUI() {
               type="search"
               class="search-input"
               id="search-input"
-              placeholder="Buscar skill ou talent…"
+              placeholder="Buscar skill ou talent…  ( / )"
               aria-label="Buscar skill ou talent"
             />
           </div>
@@ -277,6 +285,12 @@ function buildUI() {
     }
   })
 
+  // Event: alternar tema claro/escuro
+  document.getElementById('btn-theme').addEventListener('click', toggleTheme)
+
+  // Event: expandir/recolher todas as fases
+  document.getElementById('btn-toggle-all').addEventListener('click', toggleAllPhases)
+
   // Tooltip global
   setupTooltips()
 }
@@ -331,6 +345,40 @@ function switchChar(id) {
   Storage.save()
   buildCharTabs()
   renderActiveChar()
+}
+
+// ─── Tema claro/escuro ────────────────────────────────────────
+function toggleTheme() {
+  State.theme = State.theme === 'light' ? 'dark' : 'light'
+  document.documentElement.setAttribute('data-theme', State.theme)
+
+  // Atualiza o ícone do botão e a cor da barra do navegador
+  const btn = document.getElementById('btn-theme')
+  if (btn) btn.textContent = State.theme === 'light' ? '🌙' : '☀️'
+  const meta = document.querySelector('meta[name="theme-color"]')
+  if (meta) meta.setAttribute('content', State.theme === 'light' ? '#f3ecdb' : '#0f0e0c')
+
+  try { localStorage.setItem(Storage.KEYS.theme, State.theme) } catch (e) { /* ignore */ }
+  showToast(State.theme === 'light' ? '☀️ Tema claro ativado' : '🌙 Tema escuro ativado')
+}
+
+// ─── Expandir/recolher todas as fases ─────────────────────────
+function toggleAllPhases() {
+  const sections = document.querySelectorAll('.phase-section')
+  if (!sections.length) return
+
+  // Se houver qualquer fase fechada, abre todas; caso contrário, fecha todas
+  const anyClosed = [...sections].some(s => !s.classList.contains('open'))
+
+  sections.forEach(section => {
+    const header = section.querySelector('.phase-header')
+    const key = header?.dataset.phaseKey
+    section.classList.toggle('open', anyClosed)
+    if (header) header.setAttribute('aria-expanded', anyClosed)
+    if (key) State.openPhases[key] = anyClosed
+  })
+  Storage.save()
+  showToast(anyClosed ? 'Todas as fases expandidas' : 'Todas as fases recolhidas')
 }
 
 // ─── Getters ──────────────────────────────────────────────────
@@ -838,6 +886,43 @@ document.addEventListener('keydown', e => {
 
     const cb = e.target.closest('.level-checkbox[role="checkbox"]')
     if (cb) { e.preventDefault(); cb.click() }
+  }
+
+  // Navegação por setas entre as abas de personagens (padrão ARIA tablist)
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+    const tab = e.target.closest('.char-tab[data-char-id]')
+    if (tab) {
+      e.preventDefault()
+      const tabs = [...document.querySelectorAll('.char-tab[data-char-id]')]
+      const idx  = tabs.indexOf(tab)
+      const next = e.key === 'ArrowRight'
+        ? tabs[(idx + 1) % tabs.length]
+        : tabs[(idx - 1 + tabs.length) % tabs.length]
+      switchChar(next.dataset.charId)
+      // Após re-render, devolve o foco à aba correspondente
+      const focused = document.querySelector(`.char-tab[data-char-id="${next.dataset.charId}"]`)
+      if (focused) focused.focus()
+    }
+  }
+})
+
+// ─── Atalhos globais de teclado ───────────────────────────────
+document.addEventListener('keydown', e => {
+  const search = document.getElementById('search-input')
+  const isTyping = e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA'
+
+  // "/" foca a busca (a menos que já esteja digitando)
+  if (e.key === '/' && !isTyping) {
+    e.preventDefault()
+    if (search) search.focus()
+  }
+
+  // Esc limpa e desfoca a busca
+  if (e.key === 'Escape' && e.target === search) {
+    search.value = ''
+    State.searchQuery = ''
+    applyFilters()
+    search.blur()
   }
 })
 

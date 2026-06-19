@@ -10,6 +10,17 @@ Guia visual interativo de progressão de builds para **Divinity: Original Sin 2*
 4. Use os filtros para ver apenas Atributos, Talents, Skills ou níveis pendentes
 5. Clique em **"▶ Nível X"** para ir direto ao próximo nível recomendado
 
+## Recursos de usabilidade
+
+- **Tema claro/escuro** — botão ☀️/🌙 no cabeçalho. A preferência é salva e, na
+  primeira visita, respeita o tema do sistema operacional (`prefers-color-scheme`).
+- **Expandir/recolher todas as fases** — botão ⇕ no cabeçalho.
+- **Atalhos de teclado:**
+  - `/` — foca o campo de busca
+  - `Esc` — limpa a busca
+  - `← / →` — alterna entre os personagens (com uma aba focada)
+  - `Enter` / `Espaço` — abre fases e marca níveis quando focados
+
 ## Personagens incluídos
 
 | Personagem | Classe | Foco |

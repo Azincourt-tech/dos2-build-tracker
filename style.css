@@ -82,6 +82,65 @@
   /* Transitions */
   --t: 180ms cubic-bezier(0.16, 1, 0.3, 1);
   --t-slow: 300ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Textura de fundo (sobrescrita no tema claro) */
+  --bg-glow:    rgba(200,148,58,0.04);
+  --bg-pattern-opacity: 0.025;
+}
+
+/* ── Tema Claro — pergaminho iluminado ── */
+[data-theme="light"] {
+  /* Surfaces — papel/pergaminho em camadas */
+  --color-bg:              #f3ecdb;
+  --color-surface:         #fbf6ea;
+  --color-surface-2:       #f1e8d3;
+  --color-surface-3:       #e8ddc3;
+  --color-surface-offset:  #ddcfac;
+  --color-border:          #d2c19a;
+  --color-divider:         #e0d4ba;
+
+  /* Text — tinta sobre pergaminho */
+  --color-text:            #2c2517;
+  --color-text-muted:      #6a5f44;
+  --color-text-faint:      #998c6a;
+  --color-text-inverse:    #fbf6ea;
+
+  /* Accent — ouro escurecido para contraste legível */
+  --color-gold:            #9a6c1a;
+  --color-gold-hover:      #b3801f;
+  --color-gold-active:     #815912;
+  --color-gold-glow:       rgba(154, 108, 26, 0.16);
+  --color-gold-subtle:     rgba(154, 108, 26, 0.10);
+
+  --char-color:            #9a6c1a;
+
+  /* Status */
+  --color-success:         #4a7c33;
+  --color-success-bg:      rgba(74, 124, 51, 0.14);
+  --color-error:           #b13b3b;
+  --color-warning:         #a86d1f;
+
+  /* Shadows — mais suaves no claro */
+  --shadow-sm: 0 1px 3px rgba(80,64,30,0.12);
+  --shadow-md: 0 4px 12px rgba(80,64,30,0.14);
+  --shadow-lg: 0 12px 32px rgba(80,64,30,0.18);
+  --shadow-gold: 0 0 20px rgba(154,108,26,0.12);
+
+  /* Textura de fundo */
+  --bg-glow:    rgba(154,108,26,0.06);
+  --bg-pattern-opacity: 0.04;
+}
+
+/* Refinos do tema claro: glows de texto ficam estranhos sobre fundo claro */
+[data-theme="light"] .logo-text { text-shadow: none; }
+[data-theme="light"] .char-name { text-shadow: 0 1px 0 rgba(255,255,255,0.4); }
+[data-theme="light"] .progress-ring .fill { filter: none; }
+
+/* Escurece textos com cor de personagem para garantir contraste no fundo claro */
+[data-theme="light"] .char-name,
+[data-theme="light"] .level-badge,
+[data-theme="light"] .progress-pct {
+  color: color-mix(in oklab, var(--char-color) 72%, #2c2517);
 }
 
 /* ── Base Reset ── */
@@ -102,10 +161,11 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(200,148,58,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% 0%, var(--bg-glow) 0%, transparent 60%),
     url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8943a' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color var(--t-slow), color var(--t-slow);
 }
 
 img, svg { display: block; max-width: 100%; }
