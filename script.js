@@ -305,7 +305,7 @@ function buildCharTabs() {
       <button
         class="char-tab${c.id === State.activeChar ? ' active' : ''}"
         data-char-id="${c.id}"
-        style="--char-tab-color: ${c.color}"
+        style="--char-tab-color-raw: ${c.color}"
         role="tab"
         aria-selected="${c.id === State.activeChar}"
         aria-label="${c.name} — ${c.class}"
@@ -416,8 +416,9 @@ function renderActiveChar() {
   const pct       = Math.round((done / total) * 100)
   const nextLv    = getNextLevel(char)
 
-  // Aplica CSS var do personagem na raiz
-  document.documentElement.style.setProperty('--char-color', char.color)
+  // Aplica a cor "crua" do personagem na raiz; o CSS deriva --char-color
+  // a partir dela, ajustando o contraste conforme o tema ativo.
+  document.documentElement.style.setProperty('--char-color-raw', char.color)
 
   container.innerHTML = `
     <div class="char-view" id="char-view">

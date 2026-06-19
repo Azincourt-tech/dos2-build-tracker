@@ -33,8 +33,11 @@
   --color-gold-glow:       rgba(200, 148, 58, 0.18);
   --color-gold-subtle:     rgba(200, 148, 58, 0.08);
 
-  /* Caractere: cores únicas por personagem (definidas dinamicamente via JS) */
-  --char-color:            #c8a84b;
+  /* Caractere: cores únicas por personagem.
+     O JS define apenas a cor "crua" (--char-color-raw); --char-color é
+     derivada dela e ajustada por tema para garantir contraste. */
+  --char-color-raw:        #c8a84b;
+  --char-color:            var(--char-color-raw);
 
   /* Status */
   --color-success:         #5e9c47;
@@ -112,7 +115,8 @@
   --color-gold-glow:       rgba(154, 108, 26, 0.16);
   --color-gold-subtle:     rgba(154, 108, 26, 0.10);
 
-  --char-color:            #9a6c1a;
+  /* Escurece a cor do personagem rumo à tinta para contraste sobre pergaminho */
+  --char-color:            color-mix(in oklab, var(--char-color-raw) 74%, #2c2517);
 
   /* Status */
   --color-success:         #4a7c33;
@@ -135,12 +139,8 @@
 [data-theme="light"] .logo-text { text-shadow: none; }
 [data-theme="light"] .char-name { text-shadow: 0 1px 0 rgba(255,255,255,0.4); }
 [data-theme="light"] .progress-ring .fill { filter: none; }
-
-/* Escurece textos com cor de personagem para garantir contraste no fundo claro */
-[data-theme="light"] .char-name,
-[data-theme="light"] .level-badge,
-[data-theme="light"] .progress-pct {
-  color: color-mix(in oklab, var(--char-color) 72%, #2c2517);
+[data-theme="light"] .char-tab {
+  --char-tab-color: color-mix(in oklab, var(--char-tab-color-raw, var(--color-gold)) 74%, #2c2517);
 }
 
 /* ── Base Reset ── */
@@ -254,6 +254,8 @@ input { font: inherit; color: inherit; }
 .char-tabs-wrap::-webkit-scrollbar { display: none; }
 
 .char-tab {
+  /* Cor crua vem inline do JS; derivada por tema para legibilidade */
+  --char-tab-color: var(--char-tab-color-raw, var(--color-gold));
   display: flex;
   align-items: center;
   gap: var(--space-2);
